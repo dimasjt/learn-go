@@ -1,0 +1,29 @@
+{{if .Success}}
+  <dl>
+    <dt>Title</dt>
+    <dd>{{.Title}}</dd>
+
+    <dt>Content</dt>
+    <dd>{{.Content}}</dd>
+
+    <dt>Published</dt>
+    <dd>{{.Published}}</dd>
+  </dl>
+{{else}}
+  <h1>New Book</h1>
+  <form method="POST">
+    <label>Title</label>
+    <input type="text" name="title" />
+    <br>
+
+    <label>Content</label>
+    <textarea name="content"></textarea>
+    <br>
+
+    <label>Published</label>
+    <input type="checkbox" value="true" name="published" />
+    <br>
+
+    <input type="submit" value="save" />
+  </form>
+{{end}}

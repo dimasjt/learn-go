@@ -1,0 +1,19 @@
+<h1>
+  List available Books
+</h1>
+
+<div class="list-books">
+  {{range .Books}}
+    <div class="book">
+      <h3>{{.Title}}</h3>
+      <article>
+        {{.Content}}
+      </article>
+      {{if .Published}}
+        <a>Published</a>
+      {{else}}
+        <a>Not Published</a>
+      {{end}}
+    </div>
+  {{end}}
+</div>
