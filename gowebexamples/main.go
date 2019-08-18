@@ -2,6 +2,7 @@ package main
 
 import (
 	"database/sql"
+	"fmt"
 	"html/template"
 	"io"
 	"log"
@@ -107,5 +108,6 @@ func main() {
 	r.PathPrefix(StaticDir).
 		Handler(http.StripPrefix(StaticDir, http.FileServer(http.Dir("."+StaticDir))))
 
+	fmt.Println("server started")
 	http.ListenAndServe(":"+Port, r)
 }

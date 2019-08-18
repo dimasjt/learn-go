@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "gobyexample",
+      "type": "shell",
+      "command": "cd gowebexamples && go build -o app && ./app",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "learn-db",
+      "type": "shell",
+      "command": "cd learn-with-db && go build -o app && ./app",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
