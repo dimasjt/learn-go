@@ -5,19 +5,19 @@
       "label": "gobyexample",
       "type": "shell",
       "command": "cd gowebexamples && go build -o app && ./app",
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      }
+      "group": "build"
     },
     {
       "label": "learn-db",
       "type": "shell",
-      "command": "cd learn-with-db && go build -o app && ./app",
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      }
+      "command": "cd learn-with-db && go build -o app ./api && ./app",
+      "group": "build"
+    },
+    {
+      "label": "rest-api-without-db",
+      "type": "shell",
+      "command": "cd rest-api-without-db && go build -o app && ./app",
+      "group": "build"
     }
   ]
 }
